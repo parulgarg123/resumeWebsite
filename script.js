@@ -168,3 +168,118 @@ const timelineObserver = new IntersectionObserver((entries) => {
 timelineItems.forEach(item => {
     timelineObserver.observe(item);
 });
+
+// Mobile Hamburger Menu
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const links = document.querySelectorAll('.nav-links li');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('nav-active');
+    hamburger.classList.toggle('toggle');
+});
+
+// Close mobile menu when link is clicked
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinks.classList.remove('nav-active');
+        hamburger.classList.remove('toggle');
+    });
+});
+
+// Scroll Progress Bar & Back to Top
+const scrollProgress = document.getElementById('scroll-progress');
+const backToTop = document.querySelector('.back-to-top');
+
+window.addEventListener('scroll', () => {
+    // Progress Bar
+    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (scrollTop / scrollHeight) * 100;
+    scrollProgress.style.width = `${scrolled}%`;
+
+    // Back to Top
+    if (scrollTop > 500) {
+        backToTop.classList.add('active');
+    } else {
+        backToTop.classList.remove('active');
+    }
+});
+
+// Typewriter Effect
+const typeTextSpan = document.querySelector('.typewriter-text');
+const typeWriterTexts = ["Senior Software Engineer", "AI & Data Architect", "Open Source Contributor"];
+let textIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let typeSpeed = 100;
+
+function typeWriter() {
+    const currentText = typeWriterTexts[textIndex];
+
+    if (isDeleting) {
+        typeTextSpan.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+        typeSpeed = 50; // Deleting speed
+    } else {
+        typeTextSpan.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+        typeSpeed = 100; // Typing speed
+    }
+
+    if (!isDeleting && charIndex === currentText.length) {
+        // Finished typing word
+        isDeleting = true;
+        typeSpeed = 2000; // Pause at end
+    } else if (isDeleting && charIndex === 0) {
+        // Finished deleting word
+        isDeleting = false;
+        textIndex = (textIndex + 1) % typeWriterTexts.length;
+        typeSpeed = 500; // Pause before new word
+    }
+
+    setTimeout(typeWriter, typeSpeed);
+}
+
+// Start Typewriter
+document.addEventListener('DOMContentLoaded', typeWriter);
+
+// Active Navigation Highlight (Scroll Spy)
+const sections = document.querySelectorAll('section');
+const navLi = document.querySelectorAll('.nav-links li a');
+
+window.addEventListener('scroll', () => {
+    let current = '';
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - 200)) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    navLi.forEach(a => {
+        a.classList.remove('active');
+        if (a.getAttribute('href').includes(current)) {
+            a.classList.add('active');
+        }
+    });
+});
+
+// Magnetic Buttons
+const magnets = document.querySelectorAll('.magnetic-btn');
+
+magnets.forEach((magnet) => {
+    magnet.addEventListener('mousemove', (e) => {
+        const position = magnet.getBoundingClientRect();
+        const x = e.clientX - position.left - position.width / 2;
+        const y = e.clientY - position.top - position.height / 2;
+
+        magnet.style.transform = `translate(${x * 0.3}px, ${y * 0.5}px)`;
+    });
+
+    magnet.addEventListener('mouseleave', () => {
+        magnet.style.transform = 'translate(0px, 0px)';
+    });
+});

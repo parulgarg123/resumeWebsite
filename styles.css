@@ -819,16 +819,207 @@ body {
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+        /* Ensure padding on small screens */
+    }
+
     .hero-name {
         font-size: 3rem;
+        word-wrap: break-word;
+        /* Prevent overflow */
+    }
+
+    .hero-description {
+        padding: 0 10px;
     }
 
     .nav-links {
-        display: none;
-        /* Add hamburger menu logic later */
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        /* Adjust based on header height */
+        height: calc(100vh - 70px);
+        background-color: var(--bg-color);
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        transition: right 0.5s ease-in-out;
+        z-index: 1000;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .nav-links.nav-active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        background-color: var(--text-primary);
+    }
+
+    /* Hamburger Animation */
+    .hamburger.toggle .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.toggle .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.toggle .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 
     .stats-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+        /* Add gap for mobile stacking */
     }
+
+    /* Fix Timeline for Mobile */
+    .timeline::after {
+        left: 31px;
+        /* Move vertical line to left */
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-item.left,
+    .timeline-item.right {
+        left: 0;
+    }
+
+    .timeline-item.left::after,
+    .timeline-item.right::after {
+        left: 21px;
+        /* Adjust dot position */
+        right: auto;
+    }
+
+    .timeline-item.right {
+        left: 0;
+    }
+
+    .timeline-content {
+        /* Ensure content takes full width minus padding */
+        width: 100%;
+    }
+}
+
+/* Scroll Progress Bar */
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: var(--accent-primary);
+    z-index: 9999;
+    box-shadow: 0 0 10px var(--accent-primary);
+    transition: width 0.1s;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--accent-primary);
+    color: var(--bg-color);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    z-index: 100;
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+}
+
+.back-to-top.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--text-primary);
+    transform: translateY(-5px);
+}
+
+/* Typewriter Cursor */
+.cursor {
+    display: inline-block;
+    color: var(--accent-primary);
+    font-weight: 400;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Active Navigation */
+.nav-link.active {
+    color: var(--accent-primary);
+}
+
+.nav-link.active::after {
+    width: 100%;
+    /* If using underline effect */
+}
+
+/* Resume Button styling */
+.btn-resume {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid var(--accent-primary);
+    border-radius: 6px;
+    color: var(--accent-primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-resume:hover {
+    background: rgba(56, 189, 248, 0.1);
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+}
+
+/* Magnetic Button (Base styles are already handled by .btn, JS handles movement) */
+.magnetic-btn {
+    position: relative;
+    z-index: 1;
 }
