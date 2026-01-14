@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Parul Garg - Senior Software Engineer. Portfolio highlighting expertise in distributed systems, AI, and cloud architecture.">
+    <title>Parul Garg | Senior Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+
+    <canvas id="particles-canvas"></canvas>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="logo">PG</a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content" data-tilt>
+                <p class="hero-intro">Hello, I am</p>
+                <h1 class="hero-name glitch" data-text="Parul Garg">Parul Garg</h1>
+                <h2 class="hero-title">Senior Software Engineer</h2>
+                <p class="hero-description">Architecting large-scale distributed systems & AI-powered data platforms.
+                </p>
+                <div class="hero-cta">
+                    <a href="#about" class="btn btn-primary">Explore Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container margin-top">
+                <h2 class="section-title">Profile<span class="dot">.</span></h2>
+                <div class="about-grid">
+                    <div class="about-card glass">
+                        <p>Senior Software Engineer with <strong>8+ years</strong> of experience in Product development,
+                            Data Science, and building tools using Open Source Tech. Expert in <strong>CI/CD
+                                Pipelines</strong> and deploying multiple machine learning models in production.</p>
+                        <p>Proven track record at <strong>Microsoft</strong>, <strong>Amazon</strong>, and
+                            <strong>SAP</strong>. Awarded the <strong>"Futuristic Award"</strong> by CISO-Wipro for
+                            developing a S.I.E.M tool using Open Source.
+                        </p>
+                        <p>Passionate about High-Level Design, OAuth, and Cloud-Native Architectures (AWS & Azure). Also
+                            an active investor and mentor.</p>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-item glass">
+                            <span class="stat-number" data-target="8">0</span><span class="plus">+</span>
+                            <span class="stat-label">Years Exp.</span>
+                        </div>
+                        <div class="stat-item glass">
+                            <span class="stat-number" data-target="100">0</span><span class="plus">M+</span>
+                            <span class="stat-label">RPM Scale</span>
+                        </div>
+                        <div class="stat-item glass">
+                            <span class="stat-number" data-target="18">0</span><span class="plus">M+</span>
+                            <span class="stat-label">Savings ($)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Placeholder for other sections (Skills, Experience, etc.) to be implemented progressively -->
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <h2 class="section-title">Tech Proficiency<span class="dot">.</span></h2>
+                <div class="skills-grid">
+                    <!-- Programming -->
+                    <div class="skill-category glass" data-tilt>
+                        <h3><i class="fas fa-code"></i> Programming</h3>
+                        <div class="skill-tags">
+                            <span>Java</span>
+                            <span>Python</span>
+                            <span>C#</span>
+                            <span>React.js</span>
+                            <span>High-Level Design</span>
+                            <span>OAuth</span>
+                        </div>
+                    </div>
+                    <!-- Cloud -->
+                    <div class="skill-category glass" data-tilt>
+                        <h3><i class="fas fa-cloud"></i> Cloud</h3>
+                        <div class="skill-tags">
+                            <span>AWS (S3, SQS, SNS)</span>
+                            <span>Azure Data Explorer</span>
+                            <span>Azure Data Lake</span>
+                            <span>Databricks</span>
+                            <span>IBM Cloud Essentials</span>
+                        </div>
+                    </div>
+                    <!-- AI & Data -->
+                    <div class="skill-category glass" data-tilt>
+                        <h3><i class="fas fa-brain"></i> AI & Data</h3>
+                        <div class="skill-tags">
+                            <span>Deep Learning</span>
+                            <span>Neural Networks</span>
+                            <span>Hyperparameter Tuning</span>
+                            <span>MCP Development</span>
+                            <span>Medallion Arch</span>
+                        </div>
+                    </div>
+                    <!-- Databases & Tools -->
+                    <div class="skill-category glass" data-tilt>
+                        <h3><i class="fas fa-tools"></i> Tools & DevOps</h3>
+                        <div class="skill-tags">
+                            <span>Splunk</span>
+                            <span>Hadoop</span>
+                            <span>ELK Stack</span>
+                            <span>Docker</span>
+                            <span>Kubernetes</span>
+                            <span>CI/CD Pipelines</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Experience Section -->
+        <section id="experience" class="section experience-section">
+            <div class="container">
+                <h2 class="section-title">Experience<span class="dot">.</span></h2>
+                <div class="timeline">
+                    <!-- Microsoft Senior -->
+                    <div class="timeline-item left">
+                        <div class="timeline-content glass" data-tilt>
+                            <span class="date">Aug 2025 - Present</span>
+                            <h3>Senior Software Engineer</h3>
+                            <h4>Microsoft (India)</h4>
+                            <p>Building Microsoft Sentinel data lake. Leading design & implementation of
+                                high-performance data platforms.</p>
+                        </div>
+                    </div>
+                    <!-- Microsoft Lead -->
+                    <div class="timeline-item right">
+                        <div class="timeline-content glass" data-tilt>
+                            <span class="date">Oct 2023 - Present</span>
+                            <h3>Software Engineer II</h3>
+                            <h4>Microsoft (Noida)</h4>
+                            <p>Building Core Intune Data platform for Security management Product (Microsoft Intune).
+                                Handling <strong>100M+ RPM</strong>, driving <strong>$8M annual savings</strong>.</p>
+                            <div class="tech-stack-mini">
+                                <span>ASP .Net</span><span>Azure</span><span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Microsoft SDE II -->
+                    <div class="timeline-item left">
+                        <div class="timeline-content glass" data-tilt>
+                            <span class="date">Jan 2023 - Present</span>
+                            <h3>Software Engineer II</h3>
+                            <h4>Microsoft</h4>
+                            <p>Core Infrastructure Storage developer for Security management Product Microsoft Intune
+                                (Cloud-based endpoint management).</p>
+                        </div>
+                    </div>
+                    <!-- Amazon -->
+                    <div class="timeline-item right">
+                        <div class="timeline-content glass" data-tilt>
+                            <span class="date">Dec 2020 - Jan 2023</span>
+                            <h3>Software Engineer</h3>
+                            <h4>Amazon</h4>
+                            <p>Operations & Transportation Org. Developed software solutions for Network Abuse and ONDC
+                                charter. Saved <strong>$10MM/year</strong> via video surveillance system.</p>
+                            <div class="tech-stack-mini">
+                                <span>Java</span><span>AWS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Amazon Alexa -->
+                    <div class="timeline-item left">
+                        <div class="timeline-content glass" data-tilt>
+                            <span class="date">Dec 2019 - Dec 2020</span>
+                            <h3>Software Engineer</h3>
+                            <h4>Amazon (Alexa Org)</h4>
+                            <p>Developed solutions enhancing Alexa and Alexa-based digital/physical products.</p>
+                        </div>
+                    </div>
+                    <!-- SAP Labs -->
+                    <div class="timeline-item right">
+                        <div class="timeline-content glass" data-tilt>
+                            <span class="date">Aug 2019 - Dec 2019</span>
+                            <h3>Development Associate</h3>
+                            <h4>SAP Labs India</h4>
+                            <p>CX marketing cloud suite. Developed extensibility for Custom Fields/Business Objects and
+                                automated legacy code processes.</p>
+                            <div class="tech-stack-mini">
+                                <span>Python</span><span>ABAP</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Wipro -->
+                    <div class="timeline-item left">
+                        <div class="timeline-content glass" data-tilt>
+                            <span class="date">May 2018 - Aug 2019</span>
+                            <h3>Cyber Security Intelligence Developer</h3>
+                            <h4>Wipro Limited</h4>
+                            <p><strong>Awards:</strong> "Futuristic Award" by CISO-Wipro for developing S.I.E.M Tool
+                                using Open Source. Developed ML solutions reducing manual investigation effort by 70%.
+                            </p>
+                            <div class="tech-stack-mini">
+                                <span>Python</span><span>ELK</span><span>Hadoop</span><span>Splunk</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Education Section -->
+        <section id="education" class="section education-section">
+            <div class="container">
+                <h2 class="section-title">Education & Achievements<span class="dot">.</span></h2>
+                <div class="education-grid">
+                    <div class="education-card glass" data-tilt>
+                        <span class="year">2014 - 2018</span>
+                        <h3>B.Tech</h3>
+                        <h4>Chandigarh Group of Colleges</h4>
+                        <p>Graduated with High Honours (86.54%).</p>
+                    </div>
+                    <div class="education-card glass" data-tilt>
+                        <span class="year">Honors & Awards</span>
+                        <h3>Futuristic Award</h3>
+                        <h4>By CISO - Wipro</h4>
+                        <p>For developing S.I.E.M (Security Information and Event Management) Tool based on Open Source.
+                        </p>
+                    </div>
+                    <div class="education-card glass" data-tilt>
+                        <span class="year">Publications</span>
+                        <h3>Fundamental Investing Cookbook</h3>
+                        <h4>For Beginners</h4>
+                        <p>A guide to understanding investment fundamentals.</p>
+                    </div>
+                    <div class="education-card glass" data-tilt>
+                        <span class="year">Certifications</span>
+                        <h3>Continuous Learning</h3>
+                        <ul class="cert-list">
+                            <li>Data Science and Machine Learning (Stanford)</li>
+                            <li>Deep Neural Networks (Hyperparameter tuning)</li>
+                            <li>AWS Certified Developer – Associate</li>
+                            <li>IBM Cloud Essentials</li>
+                            <li>Bootcamp with R</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title">Get In Touch<span class="dot">.</span></h2>
+                <div class="contact-content glass">
+                    <p class="contact-text">Interested in discussing distributed systems, AI, or potential
+                        collaborations? Feel free to reach out.</p>
+                    <div class="contact-links">
+                        <a href="mailto:parulg014@gmail.com" class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>parulg014@gmail.com</span>
+                        </a>
+                        <a href="tel:+919915178377" class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91-99151-78377</span>
+                        </a>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/parulg014/" class="social-icon" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/parulgarg123" class="social-icon" target="_blank"
+                                rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <footer class="footer">
+                    <p>&copy; 2026 Parul Garg. Built with <i class="fas fa-heart"></i> & Code.</p>
+                </footer>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
