@@ -4,317 +4,417 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parul Garg — Senior Software Engineer | AI, Distributed Systems &amp; Cloud Architecture</title>
     <meta name="description"
-        content="Parul Garg - Senior Software Engineer. Portfolio highlighting expertise in distributed systems, AI, and cloud architecture.">
-    <title>Parul Garg | Senior Software Engineer</title>
+        content="Parul Garg, Senior Software Engineer at Atlassian (ex-Microsoft, Amazon, SAP). AI &amp; Machine Learning Engineer, Forward Deployed Engineer (FDE), specializing in distributed systems, cloud-native architecture, and production ML platforms.">
+    <meta name="keywords"
+        content="Parul Garg, Senior Software Engineer, AI Engineer, Machine Learning Engineer, Forward Deployed Engineer, FDE, Distributed Systems, Cloud Architecture, Atlassian, Microsoft, Amazon, Data Platforms, Deep Learning">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;700&family=Space+Grotesk:wght@300;400;500;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div id="scroll-progress"></div>
-    <div id="cursor"></div>
-    <div id="cursor-blur"></div>
+    <div id="progress-bar"></div>
 
-    <canvas id="particles-canvas"></canvas>
-
-    <header class="header">
-        <nav class="navbar">
-            <a href="#" class="logo">PG</a>
-            <ul class="nav-links">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="Parul_Resume_SSE_8_25Aug.pdf" class="btn-resume" download><i class="fas fa-download"></i>
-                        Resume</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </nav>
-    </header>
+    <nav class="nav" id="nav">
+        <span class="nav-brand">Parul Garg</span>
+        <a href="#profile" class="nav-link" data-nav="profile">Profile</a>
+        <a href="#skills" class="nav-link" data-nav="skills">Skills</a>
+        <a href="#experience" class="nav-link" data-nav="experience">Experience</a>
+        <a href="#education" class="nav-link" data-nav="education">Education</a>
+        <a href="#contact" class="nav-link" data-nav="contact">Contact</a>
+        <a href="Parul_Resume_SSE_8_25Aug.pdf" class="btn btn-secondary" download>Resume
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <path d="M7 10l5 5 5-5"></path>
+                <path d="M12 15V3"></path>
+            </svg>
+        </a>
+    </nav>
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="hero-section">
-            <div class="hero-content" data-tilt>
-                <p class="hero-intro">Hello, I am</p>
-                <h1 class="hero-name glitch" data-text="Parul Garg">Parul Garg</h1>
-                <h2 class="hero-title"><span class="typewriter-text"></span><span class="cursor">|</span></h2>
-                <p class="hero-description">Architecting large-scale distributed systems & AI-powered data platforms.
-                </p>
-                <div class="hero-cta">
-                    <a href="#about" class="btn btn-primary magnetic-btn">Explore Work</a>
-                    <a href="#contact" class="btn btn-secondary magnetic-btn">Contact Me</a>
-                </div>
-            </div>
-            <div class="scroll-indicator">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about" class="section about-section">
-            <div class="container margin-top">
-                <h2 class="section-title">Profile<span class="dot">.</span></h2>
-                <div class="about-grid">
-                    <div class="about-card glass">
-                        <p>Senior Software Engineer with <strong>8+ years</strong> of experience in Product development,
-                            Data Science, and building tools using Open Source Tech. Expert in <strong>CI/CD
-                                Pipelines</strong> and deploying multiple machine learning models in production.</p>
-                        <p>Proven track record at <strong>Microsoft</strong>, <strong>Amazon</strong>, and
-                            <strong>SAP</strong>. Awarded the <strong>"Futuristic Award"</strong> by CISO-Wipro for
-                            developing a S.I.E.M tool using Open Source.
-                        </p>
-                        <p>Passionate about High-Level Design, OAuth, and Cloud-Native Architectures (AWS & Azure). Also
-                            an active investor and mentor.</p>
+        <section id="hero" class="hero">
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <p class="eyebrow">Hello, I'm</p>
+                    <h1 class="hero-name">Parul Garg</h1>
+                    <h2 class="hero-role"><span id="typed-text"></span><span class="type-cursor">|</span></h2>
+                    <p class="hero-desc">Architecting large-scale distributed systems &amp; AI-powered data platforms.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#profile" class="btn btn-primary">Explore work
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M7 7h10v10"></path>
+                                <path d="M7 17 17 7"></path>
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">Contact me</a>
                     </div>
-                    <div class="stats-grid">
-                        <div class="stat-item glass">
-                            <span class="stat-number" data-target="8">0</span><span class="plus">+</span>
-                            <span class="stat-label">Years Exp.</span>
-                        </div>
-                        <div class="stat-item glass">
-                            <span class="stat-number" data-target="100">0</span><span class="plus">M+</span>
-                            <span class="stat-label">RPM Scale</span>
-                        </div>
-                        <div class="stat-item glass">
-                            <span class="stat-number" data-target="18">0</span><span class="plus">M+</span>
-                            <span class="stat-label">Savings ($)</span>
-                        </div>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-value" data-target="8" data-suffix="+">0+</span>
+                        <span class="stat-label">Years Exp.</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" data-target="100" data-suffix="M+">0M+</span>
+                        <span class="stat-label">RPM Scale</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" data-target="18" data-suffix="M+">0M+</span>
+                        <span class="stat-label">Savings ($)</span>
                     </div>
                 </div>
             </div>
+            <div class="scroll-hint">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 5v14"></path>
+                    <path d="m19 12-7 7-7-7"></path>
+                </svg>
+            </div>
         </section>
 
-        <!-- Placeholder for other sections (Skills, Experience, etc.) to be implemented progressively -->
+        <!-- Profile Section -->
+        <section id="profile" class="section">
+            <div class="section-inner reveal">
+                <div class="section-header">
+                    <span class="section-num">01</span>
+                    <h2>Profile</h2>
+                </div>
+                <div class="profile-grid">
+                    <div class="profile-copy">
+                        <p>Senior Software Engineer with <strong>8+ years</strong> of experience in Product
+                            development, Data Science, and building tools using Open Source Tech. Expert in
+                            <strong>CI/CD Pipelines</strong> and deploying multiple machine learning models in
+                            production.</p>
+                        <p>Proven track record at <strong>Atlassian</strong>, <strong>Microsoft</strong>,
+                            <strong>Amazon</strong>, and <strong>SAP</strong>. Awarded the
+                            <strong>&quot;Futuristic Award&quot;</strong> by CISO-Wipro for developing a S.I.E.M tool
+                            using Open Source.</p>
+                        <p>Passionate about High-Level Design, OAuth, and Cloud-Native Architectures (AWS &amp;
+                            Azure). Also an active investor and mentor.</p>
+                    </div>
+                    <div class="profile-focus">
+                        <p class="focus-label">Focus areas</p>
+                        <div class="tag-row">
+                            <span class="tag tag-outline">AI &amp; Machine Learning</span>
+                            <span class="tag tag-outline">Forward Deployed Engineering (FDE)</span>
+                            <span class="tag tag-outline">High-Level Design</span>
+                            <span class="tag tag-outline">OAuth</span>
+                            <span class="tag tag-outline">AWS</span>
+                            <span class="tag tag-outline">Azure</span>
+                            <span class="tag tag-outline">CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Skills Section -->
-        <section id="skills" class="section skills-section">
-            <div class="container">
-                <h2 class="section-title">Tech Proficiency<span class="dot">.</span></h2>
+        <section id="skills" class="section">
+            <div class="section-inner reveal">
+                <div class="section-header">
+                    <span class="section-num">02</span>
+                    <h2>Tech Proficiency</h2>
+                </div>
                 <div class="skills-grid">
-                    <!-- Programming -->
-                    <div class="skill-category glass" data-tilt>
-                        <h3><i class="fas fa-code"></i> Programming</h3>
-                        <div class="skill-tags">
-                            <span>Java</span>
-                            <span>Python</span>
-                            <span>C#</span>
-                            <span>React.js</span>
-                            <span>High-Level Design</span>
-                            <span>OAuth</span>
+                    <div class="card">
+                        <div class="skill-head">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="skill-icon">
+                                <path d="m16 18 6-6-6-6"></path>
+                                <path d="m8 6-6 6 6 6"></path>
+                            </svg>
+                            <h3>Programming</h3>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tag tag-neutral">Java</span>
+                            <span class="tag tag-neutral">Python</span>
+                            <span class="tag tag-neutral">C#</span>
+                            <span class="tag tag-neutral">React.js</span>
+                            <span class="tag tag-neutral">High-Level Design</span>
+                            <span class="tag tag-neutral">OAuth</span>
                         </div>
                     </div>
-                    <!-- Cloud -->
-                    <div class="skill-category glass" data-tilt>
-                        <h3><i class="fas fa-cloud"></i> Cloud</h3>
-                        <div class="skill-tags">
-                            <span>AWS (S3, SQS, SNS)</span>
-                            <span>Azure Data Explorer</span>
-                            <span>Azure Data Lake</span>
-                            <span>Databricks</span>
-                            <span>IBM Cloud Essentials</span>
+                    <div class="card">
+                        <div class="skill-head">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="skill-icon">
+                                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+                            </svg>
+                            <h3>Cloud</h3>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tag tag-neutral">AWS (S3, SQS, SNS)</span>
+                            <span class="tag tag-neutral">Azure Data Explorer</span>
+                            <span class="tag tag-neutral">Azure Data Lake</span>
+                            <span class="tag tag-neutral">Databricks</span>
+                            <span class="tag tag-neutral">IBM Cloud Essentials</span>
                         </div>
                     </div>
-                    <!-- AI & Data -->
-                    <div class="skill-category glass" data-tilt>
-                        <h3><i class="fas fa-brain"></i> AI & Data</h3>
-                        <div class="skill-tags">
-                            <span>Deep Learning</span>
-                            <span>Neural Networks</span>
-                            <span>Hyperparameter Tuning</span>
-                            <span>MCP Development</span>
-                            <span>Medallion Arch</span>
+                    <div class="card">
+                        <div class="skill-head">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="skill-icon">
+                                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                                <rect x="9" y="9" width="6" height="6"></rect>
+                                <path d="M15 2v2"></path>
+                                <path d="M15 20v2"></path>
+                                <path d="M2 15h2"></path>
+                                <path d="M2 9h2"></path>
+                                <path d="M20 15h2"></path>
+                                <path d="M20 9h2"></path>
+                                <path d="M9 2v2"></path>
+                                <path d="M9 20v2"></path>
+                            </svg>
+                            <h3>AI &amp; Data</h3>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tag tag-neutral">Deep Learning</span>
+                            <span class="tag tag-neutral">Neural Networks</span>
+                            <span class="tag tag-neutral">Hyperparameter Tuning</span>
+                            <span class="tag tag-neutral">MCP Development</span>
+                            <span class="tag tag-neutral">Medallion Arch</span>
                         </div>
                     </div>
-                    <!-- Databases & Tools -->
-                    <div class="skill-category glass" data-tilt>
-                        <h3><i class="fas fa-tools"></i> Tools & DevOps</h3>
-                        <div class="skill-tags">
-                            <span>Splunk</span>
-                            <span>Hadoop</span>
-                            <span>ELK Stack</span>
-                            <span>Docker</span>
-                            <span>Kubernetes</span>
-                            <span>CI/CD Pipelines</span>
+                    <div class="card">
+                        <div class="skill-head">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="skill-icon">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                                </path>
+                            </svg>
+                            <h3>Tools &amp; DevOps</h3>
+                        </div>
+                        <div class="tag-row">
+                            <span class="tag tag-neutral">Splunk</span>
+                            <span class="tag tag-neutral">Hadoop</span>
+                            <span class="tag tag-neutral">ELK Stack</span>
+                            <span class="tag tag-neutral">Docker</span>
+                            <span class="tag tag-neutral">Kubernetes</span>
+                            <span class="tag tag-neutral">CI/CD Pipelines</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- Experience Section -->
-        <section id="experience" class="section experience-section">
-            <div class="container">
-                <h2 class="section-title">Experience<span class="dot">.</span></h2>
-                <div class="timeline">
-                    <!-- Microsoft Senior -->
-                    <div class="timeline-item left">
-                        <div class="timeline-content glass" data-tilt>
-                            <span class="date">Aug 2025 - Present</span>
+        <section id="experience" class="section">
+            <div class="section-inner reveal">
+                <div class="section-header">
+                    <span class="section-num">03</span>
+                    <h2>Experience</h2>
+                </div>
+                <div class="job-list">
+                    <div class="job-row reveal" style="transition-delay:0ms">
+                        <div class="job-date-col"><span class="job-date">Mar 2026 - Present</span></div>
+                        <div class="job-body">
+                            <h3>Software Engineer</h3>
+                            <h4>Atlassian</h4>
+                            <p>Senior engineer contributing to Atlassian's product engineering org, following a run
+                                of senior roles at Microsoft, Amazon and SAP.</p>
+                        </div>
+                    </div>
+                    <div class="job-row reveal" style="transition-delay:70ms">
+                        <div class="job-date-col"><span class="job-date">Aug 2025 - Feb 2026</span></div>
+                        <div class="job-body">
                             <h3>Senior Software Engineer</h3>
                             <h4>Microsoft (India)</h4>
-                            <p>Building Microsoft Sentinel data lake. Leading design & implementation of
+                            <p>Building Microsoft Sentinel data lake. Leading design &amp; implementation of
                                 high-performance data platforms.</p>
                         </div>
                     </div>
-                    <!-- Microsoft Lead -->
-                    <div class="timeline-item right">
-                        <div class="timeline-content glass" data-tilt>
-                            <span class="date">Oct 2023 - Present</span>
+                    <div class="job-row reveal" style="transition-delay:140ms">
+                        <div class="job-date-col"><span class="job-date">Oct 2023 - Feb 2026</span></div>
+                        <div class="job-body">
                             <h3>Software Engineer II</h3>
                             <h4>Microsoft (Noida)</h4>
                             <p>Building Core Intune Data platform for Security management Product (Microsoft Intune).
-                                Handling <strong>100M+ RPM</strong>, driving <strong>$8M annual savings</strong>.</p>
-                            <div class="tech-stack-mini">
-                                <span>ASP .Net</span><span>Azure</span><span>Python</span>
+                                Handling 100M+ RPM, driving $8M annual savings.</p>
+                            <div class="tag-row">
+                                <span class="tag tag-accent">ASP .Net</span>
+                                <span class="tag tag-accent">Azure</span>
+                                <span class="tag tag-accent">Python</span>
                             </div>
                         </div>
                     </div>
-                    <!-- Microsoft SDE II -->
-                    <div class="timeline-item left">
-                        <div class="timeline-content glass" data-tilt>
-                            <span class="date">Jan 2023 - Present</span>
+                    <div class="job-row reveal" style="transition-delay:210ms">
+                        <div class="job-date-col"><span class="job-date">Jan 2023 - Feb 2026</span></div>
+                        <div class="job-body">
                             <h3>Software Engineer II</h3>
                             <h4>Microsoft</h4>
                             <p>Core Infrastructure Storage developer for Security management Product Microsoft Intune
                                 (Cloud-based endpoint management).</p>
                         </div>
                     </div>
-                    <!-- Amazon -->
-                    <div class="timeline-item right">
-                        <div class="timeline-content glass" data-tilt>
-                            <span class="date">Dec 2020 - Jan 2023</span>
+                    <div class="job-row reveal" style="transition-delay:280ms">
+                        <div class="job-date-col"><span class="job-date">Dec 2020 - Jan 2023</span></div>
+                        <div class="job-body">
                             <h3>Software Engineer</h3>
                             <h4>Amazon</h4>
-                            <p>Operations & Transportation Org. Developed software solutions for Network Abuse and ONDC
-                                charter. Saved <strong>$10MM/year</strong> via video surveillance system.</p>
-                            <div class="tech-stack-mini">
-                                <span>Java</span><span>AWS</span>
+                            <p>Operations &amp; Transportation Org. Developed software solutions for Network Abuse and
+                                ONDC charter. Saved $10MM/year via video surveillance system.</p>
+                            <div class="tag-row">
+                                <span class="tag tag-accent">Java</span>
+                                <span class="tag tag-accent">AWS</span>
                             </div>
                         </div>
                     </div>
-                    <!-- Amazon Alexa -->
-                    <div class="timeline-item left">
-                        <div class="timeline-content glass" data-tilt>
-                            <span class="date">Dec 2019 - Dec 2020</span>
+                    <div class="job-row reveal" style="transition-delay:350ms">
+                        <div class="job-date-col"><span class="job-date">Dec 2019 - Dec 2020</span></div>
+                        <div class="job-body">
                             <h3>Software Engineer</h3>
                             <h4>Amazon (Alexa Org)</h4>
                             <p>Developed solutions enhancing Alexa and Alexa-based digital/physical products.</p>
                         </div>
                     </div>
-                    <!-- SAP Labs -->
-                    <div class="timeline-item right">
-                        <div class="timeline-content glass" data-tilt>
-                            <span class="date">Aug 2019 - Dec 2019</span>
+                    <div class="job-row reveal" style="transition-delay:420ms">
+                        <div class="job-date-col"><span class="job-date">Aug 2019 - Dec 2019</span></div>
+                        <div class="job-body">
                             <h3>Development Associate</h3>
                             <h4>SAP Labs India</h4>
-                            <p>CX marketing cloud suite. Developed extensibility for Custom Fields/Business Objects and
-                                automated legacy code processes.</p>
-                            <div class="tech-stack-mini">
-                                <span>Python</span><span>ABAP</span>
+                            <p>CX marketing cloud suite. Developed extensibility for Custom Fields/Business Objects
+                                and automated legacy code processes.</p>
+                            <div class="tag-row">
+                                <span class="tag tag-accent">Python</span>
+                                <span class="tag tag-accent">ABAP</span>
                             </div>
                         </div>
                     </div>
-                    <!-- Wipro -->
-                    <div class="timeline-item left">
-                        <div class="timeline-content glass" data-tilt>
-                            <span class="date">May 2018 - Aug 2019</span>
+                    <div class="job-row reveal" style="transition-delay:490ms">
+                        <div class="job-date-col"><span class="job-date">May 2018 - Aug 2019</span></div>
+                        <div class="job-body">
                             <h3>Cyber Security Intelligence Developer</h3>
                             <h4>Wipro Limited</h4>
-                            <p><strong>Awards:</strong> "Futuristic Award" by CISO-Wipro for developing S.I.E.M Tool
-                                using Open Source. Developed ML solutions reducing manual investigation effort by 70%.
-                            </p>
-                            <div class="tech-stack-mini">
-                                <span>Python</span><span>ELK</span><span>Hadoop</span><span>Splunk</span>
+                            <p>Awards: &quot;Futuristic Award&quot; by CISO-Wipro for developing S.I.E.M Tool using
+                                Open Source. Developed ML solutions reducing manual investigation effort by 70%.</p>
+                            <div class="tag-row">
+                                <span class="tag tag-accent">Python</span>
+                                <span class="tag tag-accent">ELK</span>
+                                <span class="tag tag-accent">Hadoop</span>
+                                <span class="tag tag-accent">Splunk</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- Education Section -->
-        <section id="education" class="section education-section">
-            <div class="container">
-                <h2 class="section-title">Education & Achievements<span class="dot">.</span></h2>
+        <section id="education" class="section">
+            <div class="section-inner reveal">
+                <div class="section-header">
+                    <span class="section-num">04</span>
+                    <h2>Education &amp; Achievements</h2>
+                </div>
                 <div class="education-grid">
-                    <div class="education-card glass" data-tilt>
-                        <span class="year">2014 - 2018</span>
-                        <h3>B.Tech</h3>
-                        <h4>Chandigarh Group of Colleges</h4>
-                        <p>Graduated with High Honours (86.54%).</p>
+                    <div class="card">
+                        <div class="card-kicker">2014 – 2018</div>
+                        <div class="card-title">B.Tech</div>
+                        <p class="card-subtitle">Chandigarh Group of Colleges</p>
+                        <p class="card-body">Graduated with High Honours (86.54%).</p>
                     </div>
-                    <div class="education-card glass" data-tilt>
-                        <span class="year">Honors & Awards</span>
-                        <h3>Futuristic Award</h3>
-                        <h4>By CISO - Wipro</h4>
-                        <p>For developing S.I.E.M (Security Information and Event Management) Tool based on Open Source.
-                        </p>
+                    <div class="card">
+                        <div class="card-kicker">Honors &amp; Awards</div>
+                        <div class="card-title">Futuristic Award</div>
+                        <p class="card-subtitle">By CISO – Wipro</p>
+                        <p class="card-body">For developing S.I.E.M (Security Information and Event Management) Tool
+                            based on Open Source.</p>
                     </div>
-                    <div class="education-card glass" data-tilt>
-                        <span class="year">Publications</span>
-                        <h3>Fundamental Investing Cookbook</h3>
-                        <h4>For Beginners</h4>
-                        <p>A guide to understanding investment fundamentals.</p>
+                    <div class="card">
+                        <div class="card-kicker">Publications</div>
+                        <div class="card-title">Fundamental Investing Cookbook</div>
+                        <p class="card-subtitle">For Beginners</p>
+                        <p class="card-body">A guide to understanding investment fundamentals.</p>
                     </div>
-                    <div class="education-card glass" data-tilt>
-                        <span class="year">Certifications</span>
-                        <h3>Continuous Learning</h3>
-                        <ul class="cert-list">
-                            <li>Data Science and Machine Learning (Stanford)</li>
-                            <li>Deep Neural Networks (Hyperparameter tuning)</li>
-                            <li>AWS Certified Developer – Associate</li>
-                            <li>IBM Cloud Essentials</li>
-                            <li>Bootcamp with R</li>
-                        </ul>
+                    <div class="card">
+                        <div class="card-kicker">Certifications</div>
+                        <div class="card-title">Continuous Learning</div>
+                        <p class="card-subtitle"></p>
+                        <p class="card-body">Data Science and Machine Learning · Bootcamp with R · Neural Networks
+                            and Deep Learning · Advanced Malware and Network Anomaly Detection · Improving Deep Neural
+                            Networks: Hyperparameter Tuning, Regularization and Optimization · Introduction to AI for
+                            Cybersecurity</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="section contact-section">
-            <div class="container">
-                <h2 class="section-title">Get In Touch<span class="dot">.</span></h2>
-                <div class="contact-content glass">
-                    <p class="contact-text">Interested in discussing distributed systems, AI, or potential
-                        collaborations? Feel free to reach out.</p>
-                    <div class="contact-links">
-                        <a href="mailto:parulg014@gmail.com" class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>parulg014@gmail.com</span>
-                        </a>
-                        <a href="tel:+919915178377" class="contact-item">
-                            <i class="fas fa-phone-alt"></i>
-                            <span>+91-99151-78377</span>
-                        </a>
-                        <div class="social-links">
-                            <a href="https://www.linkedin.com/in/parulg014/" class="social-icon" target="_blank"
-                                rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://github.com/parulgarg123" class="social-icon" target="_blank"
-                                rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
+        <section id="contact" class="contact-section">
+            <div class="section-inner reveal">
+                <div class="section-header">
+                    <span class="section-num">05</span>
+                    <h2>Get In Touch</h2>
                 </div>
-                <footer class="footer">
-                    <p>&copy; 2026 Parul Garg. Built with <i class="fas fa-heart"></i> & Code.</p>
-                </footer>
+                <p class="contact-lead">Interested in discussing distributed systems, AI, or potential
+                    collaborations? Feel free to reach out.</p>
+                <div class="contact-links">
+                    <a href="mailto:parulg014@gmail.com" class="contact-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                        </svg>
+                        parulg014@gmail.com
+                    </a>
+                    <a href="tel:+918360048140" class="contact-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
+                            </path>
+                        </svg>
+                        +91-83600-48140
+                    </a>
+                    <a href="https://www.parulgarg.in" target="_blank" rel="noopener noreferrer" class="contact-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                            <path d="M2 12h20"></path>
+                        </svg>
+                        parulgarg.in
+                    </a>
+                </div>
+                <div class="social-row">
+                    <a href="https://www.linkedin.com/in/parulg014/" target="_blank" rel="noopener noreferrer"
+                        class="social-btn" aria-label="LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                            </path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/parulgarg123" target="_blank" rel="noopener noreferrer"
+                        class="social-btn" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 1 5 1 5 1c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 8c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                            </path>
+                            <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </section>
-
     </main>
 
-    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+    <footer class="site-footer">
+        &copy; 2026 Parul Garg. Built with code.
+    </footer>
+
     <script src="script.js"></script>
 </body>
 
